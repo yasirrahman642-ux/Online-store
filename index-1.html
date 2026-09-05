@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yasir Leather House — Genuine Leather Footwear, Guwahati</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --cream:#fbf8f3;
+    --panel:#f2ece1;
+    --ink:#1c1712;
+    --muted:#6f6255;
+    --line:#e4dccb;
+    --cognac:#a9683a;
+    --cognac-dark:#8a5329;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .serif{font-family:'Playfair Display', serif;}
+
+  /* TOP UTILITY BAR */
+  .utility{
+    background:var(--ink); color:var(--cream);
+    text-align:center; font-size:0.75rem; letter-spacing:0.06em;
+    padding:8px 12px;
+  }
+
+  /* NAV */
+  header.site{
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:50;
+  }
+  .nav-top{
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column;
+    padding:22px 24px 14px;
+    text-align:center;
+  }
+  .nav-top .logo-row{display:flex; align-items:center; gap:12px;}
+  .nav-top img{height:76px; width:auto;}
+  .nav-top .word{
+    font-size:1.15rem; font-weight:600; letter-spacing:0.02em;
+  }
+  .nav-top .sub{
+    font-size:0.68rem; letter-spacing:0.24em; color:var(--muted); margin-top:4px;
+  }
+  .nav-links{
+    display:flex; justify-content:center; gap:30px;
+    border-top:1px solid var(--line);
+    padding:14px 24px;
+    flex-wrap:wrap;
+  }
+  .nav-links a{
+    font-size:0.85rem; text-decoration:none; color:var(--ink);
+    padding-bottom:3px; border-bottom:1px solid transparent;
+    transition:border-color .2s, color .2s;
+  }
+  .nav-links a:hover{border-color:var(--cognac); color:var(--cognac-dark);}
+  .nav-cta{
+    display:none;
+  }
+
+  /* HERO */
+  .hero{
+    padding:56px 24px 20px;
+    text-align:center;
+  }
+  .hero h1{
+    font-size:clamp(1.6rem, 3.6vw, 2.4rem);
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .hero p{color:var(--muted); max-width:460px; margin:0 auto;}
+
+  /* CAROUSEL-STYLE GRID */
+  .section{padding:44px 24px 72px;}
+  .section-label{
+    text-align:center; margin-bottom:36px;
+  }
+  .section-label h2{
+    font-size:clamp(1.3rem, 2.6vw, 1.7rem);
+    font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+  }
+  .section-label p{color:var(--muted); margin-top:8px; font-size:0.95rem; max-width:480px; margin-left:auto; margin-right:auto;}
+
+  .prod-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:0;
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  .prod-card{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--cream);
+    text-decoration:none;
+    color:var(--ink);
+    display:block;
+    transition:background .2s;
+  }
+  .prod-card:hover{background:var(--panel);}
+  .prod-photo{
+    aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--panel);
+    position:relative;
+  }
+  .prod-photo svg{width:38%; opacity:0.55;}
+  .prod-photo::after{
+    content:"Photo coming soon";
+    position:absolute; bottom:10px; left:0; right:0;
+    text-align:center;
+    font-size:0.62rem;
+    letter-spacing:0.05em;
+    color:var(--muted);
+  }
+  .prod-info{padding:16px 18px 20px;}
+  .prod-info h3{
+    font-size:0.95rem; font-weight:500; margin-bottom:6px;
+  }
+  .prod-info span{
+    font-size:0.82rem; color:var(--cognac-dark);
+  }
+
+  /* CATEGORY ICON ROW */
+  .cat-row-wrap{background:var(--panel);}
+  .cat-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(110px, 1fr));
+    gap:26px;
+    text-align:center;
+  }
+  .cat-item{text-decoration:none; color:var(--ink);}
+  .cat-icon{
+    width:88px; height:88px; margin:0 auto 12px;
+    border-radius:50%;
+    background:var(--cream);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    transition:border-color .2s;
+  }
+  .cat-item:hover .cat-icon{border-color:var(--cognac);}
+  .cat-icon svg{width:40%; stroke:var(--cognac-dark);}
+  .cat-item .label{
+    font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);
+  }
+
+  /* LEGACY */
+  .legacy{
+    text-align:center;
+    max-width:600px; margin:0 auto;
+  }
+  .legacy h2{
+    font-size:clamp(1.5rem, 3vw, 2rem); font-weight:600; margin-bottom:18px;
+  }
+  .legacy p{color:var(--muted); margin-bottom:14px;}
+  .legacy-stats{
+    display:flex; justify-content:center; gap:40px; margin-top:30px;
+  }
+  .legacy-stats div strong{
+    display:block; font-family:'Playfair Display', serif; font-size:1.6rem; color:var(--cognac-dark);
+  }
+  .legacy-stats div span{font-size:0.78rem; color:var(--muted); letter-spacing:0.05em;}
+
+  /* VISIT */
+  .visit-grid{
+    display:grid; grid-template-columns:1.1fr 1fr; gap:36px; align-items:stretch;
+  }
+  .visit-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:34px;
+    border-radius:2px;
+  }
+  .visit-card h3{font-size:1.15rem; margin-bottom:20px;}
+  .visit-row{display:flex; gap:14px; margin-bottom:18px; font-size:0.92rem; color:var(--muted);}
+  .visit-row strong{display:block; color:var(--ink); font-weight:600; margin-bottom:2px;}
+  .visit-row svg{flex-shrink:0; width:20px; height:20px; margin-top:2px; color:var(--cognac-dark);}
+  .map-frame{border:1px solid var(--line); overflow:hidden; min-height:280px; border-radius:2px;}
+  .map-frame iframe{width:100%; height:100%; min-height:280px; border:0;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 26px; border-radius:2px; font-size:0.9rem; font-weight:500;
+    text-decoration:none; transition:transform .15s ease, background .2s; margin-top:6px;
+  }
+  .btn-primary{background:var(--cognac); color:#fff;}
+  .btn-primary:hover{background:var(--cognac-dark); transform:translateY(-1px);}
+
+  /* FOOTER */
+  footer{
+    background:var(--ink); color:#c9beae;
+    padding:40px 24px; text-align:center; font-size:0.85rem;
+  }
+  footer .brand{display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:10px; color:#fff;}
+
+  .currency-badge{
+    position:fixed; bottom:22px; left:22px; z-index:60;
+    background:var(--cream); border:1px solid var(--line);
+    padding:8px 14px; border-radius:20px;
+    font-size:0.8rem; display:flex; align-items:center; gap:6px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  }
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    width:56px; height:56px; background:#25D366; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2); text-decoration:none;
+  }
+  .wa-float svg{width:28px; height:28px; fill:#fff;}
+
+  @media (max-width:760px){
+    .nav-links{gap:18px; overflow-x:auto; justify-content:flex-start;}
+    .visit-grid{grid-template-columns:1fr;}
+    .section{padding:36px 20px 56px;}
+  }
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+</style>
+</head>
+<body>
+
+<div class="utility">FREE WHATSAPP ENQUIRIES · GENUINE LEATHER · GUWAHATI, ASSAM</div>
+
+<header class="site">
+  <div class="nav-top">
+    <div class="logo-row">
+      <img src="logo-dark.png" alt="Yasir Leather House logo">
+    </div>
+    <div class="sub">EST. 2007 &nbsp;·&nbsp; GUWAHATI</div>
+  </div>
+  <nav class="nav-links wrap">
+    <a href="#collection">Men's Formal</a>
+    <a href="#collection">Casual</a>
+    <a href="#collection">Sandals</a>
+    <a href="#collection">Sports</a>
+    <a href="#legacy">Our Story</a>
+    <a href="#visit">Visit Us</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Genuine Leather, Made to Last</h1>
+  <p>Guwahati's trusted name in handcrafted leather footwear since 2007.</p>
+</section>
+
+<section class="section" id="collection">
+  <div class="wrap">
+    <div class="section-label">
+      <h2>Our Collection</h2>
+      <p>Photos are being added — message us on WhatsApp for current stock, sizes and prices in any category.</p>
+    </div>
+    <div class="prod-grid">
+
+      <a class="prod-card" href="https://wa.me/919395352908?text=Hi%2C%20I%27m%20interested%20in%20men%27s%20formal%20shoes" target="_blank" rel="noopener">
+        <div class="prod-photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 18c0-1 1-2 3-2.3 2-.3 3-1 4-2 1.3-1.3 2.3-1.7 4-1.7 1.5 0 2.3.6 3.3 1.7.7.8 1.7 1.3 3 1.3 2 0 3.7 1 3.7 3v.8H2V18z"/></svg>
+        </div>
+        <div class="prod-info"><h3>Men's Formal</h3><span>Enquire on WhatsApp →</span></div>
+      </a>
+
+      <a class="prod-card" href="https://wa.me/919395352908?text=Hi%2C%20I%27m%20interested%20in%20casual%20shoes" target="_blank" rel="noopener">
+        <div class="prod-photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 17.5c1-1.5 2.5-2 4-2 1 0 1.7.4 2.3 1 .8-1.8 2.2-3 4.2-3.5 2-.5 3.8 0 5 1.3.8.9 1.8 1.4 3 1.4.9 0 1.7.3 2 1.1v1.7H2v-1z"/></svg>
+        </div>
+        <div class="prod-info"><h3>Casual Wear</h3><span>Enquire on WhatsApp →</span></div>
+      </a>
+
+      <a class="prod-card" href="https://wa.me/919395352908?text=Hi%2C%20I%27m%20interested%20in%20sandals%20and%20slippers" target="_blank" rel="noopener">
+        <div class="prod-photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 16c0-1.2.9-2 2-2h1.5c.5-1.5 1.7-2.5 3.5-2.5s3 1 3.5 2.5H15c1.5 0 2.5.8 3 2l1 2.5H2.5L3 16z"/><path d="M6 14v-2M9 13.5V11"/></svg>
+        </div>
+        <div class="prod-info"><h3>Sandals &amp; Slippers</h3><span>Enquire on WhatsApp →</span></div>
+      </a>
+
+      <a class="prod-card" href="https://wa.me/919395352908?text=Hi%2C%20I%27m%20interested%20in%20sports%20shoes" target="_blank" rel="noopener">
+        <div class="prod-photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 17c1.5-2 3-3 5-3 1.3 0 2 .5 3 1.3 1.5-2 3.2-2.8 5-2.3 1.5.4 2.3 1.5 3 2.7.5.8 1.3 1.3 2 1.3v1.5H2V17z"/><path d="M4 15.5l2-2M8 15l2.5-2.3"/></svg>
+        </div>
+        <div class="prod-info"><h3>Sports &amp; Sneakers</h3><span>Enquire on WhatsApp →</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section cat-row-wrap">
+  <div class="wrap">
+    <div class="section-label">
+      <h2>Shop by Type</h2>
+    </div>
+    <div class="cat-row">
+      <a class="cat-item" href="https://wa.me/919395352908?text=Hi%2C%20looking%20for%20formal%20shoes" target="_blank" rel="noopener">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M2 18c0-1 1-2 3-2.3 2-.3 3-1 4-2 1.3-1.3 2.3-1.7 4-1.7 1.5 0 2.3.6 3.3 1.7.7.8 1.7 1.3 3 1.3 2 0 3.7 1 3.7 3v.8H2V18z"/></svg></div>
+        <div class="label">Formals</div>
+      </a>
+      <a class="cat-item" href="https://wa.me/919395352908?text=Hi%2C%20looking%20for%20loafers" target="_blank" rel="noopener">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M2 17.5c1-1.5 2.5-2 4-2 1 0 1.7.4 2.3 1 .8-1.8 2.2-3 4.2-3.5 2-.5 3.8 0 5 1.3.8.9 1.8 1.4 3 1.4.9 0 1.7.3 2 1.1v1.7H2v-1z"/></svg></div>
+        <div class="label">Loafers</div>
+      </a>
+      <a class="cat-item" href="https://wa.me/919395352908?text=Hi%2C%20looking%20for%20sandals" target="_blank" rel="noopener">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M3 16c0-1.2.9-2 2-2h1.5c.5-1.5 1.7-2.5 3.5-2.5s3 1 3.5 2.5H15c1.5 0 2.5.8 3 2l1 2.5H2.5L3 16z"/></svg></div>
+        <div class="label">Sandals</div>
+      </a>
+      <a class="cat-item" href="https://wa.me/919395352908?text=Hi%2C%20looking%20for%20sports%20shoes" target="_blank" rel="noopener">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M2 17c1.5-2 3-3 5-3 1.3 0 2 .5 3 1.3 1.5-2 3.2-2.8 5-2.3 1.5.4 2.3 1.5 3 2.7.5.8 1.3 1.3 2 1.3v1.5H2V17z"/></svg></div>
+        <div class="label">Sports</div>
+      </a>
+      <a class="cat-item" href="https://wa.me/919395352908?text=Hi%2C%20looking%20for%20belts%20or%20wallets" target="_blank" rel="noopener">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><rect x="3" y="10" width="18" height="4" rx="1"/><circle cx="12" cy="12" r="1.6"/></svg></div>
+        <div class="label">Belts &amp; Wallets</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="legacy">
+  <div class="wrap legacy">
+    <h2 class="serif">Nearly two decades of craft</h2>
+    <p>Since 2007, Yasir Leather House has been fitting Guwahati with genuine leather footwear — built on the belief that a good pair of shoes should be sturdy, honest, and made to be worn for years, not seasons.</p>
+    <p>Every pair is chosen and checked by hand before it reaches the shelf. No shortcuts, no synthetic substitutes passed off as leather.</p>
+    <div class="legacy-stats">
+      <div><strong>2007</strong><span>EST. SINCE</span></div>
+      <div><strong>100%</strong><span>GENUINE LEATHER</span></div>
+      <div><strong>Guwahati</strong><span>LOCALLY ROOTED</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cat-row-wrap" id="visit">
+  <div class="wrap">
+    <div class="section-label">
+      <h2>Visit the Store</h2>
+      <p>Drop by, or reach out on WhatsApp before you come in.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3 class="serif">Store details</h3>
+        <div class="visit-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          <div><strong>Address</strong>Yasir Leather House, FA Rd, Machkhowa, Guwahati, Assam 781009</div>
+        </div>
+        <div class="visit-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5.5C3 4.7 3.7 4 4.5 4H7c.5 0 1 .3 1.1.8l1 3.3c.2.5 0 1-.4 1.3l-1.6 1.3c1 2.2 2.8 4 5 5l1.3-1.6c.3-.4.8-.6 1.3-.4l3.3 1c.5.2.8.6.8 1.1v2.5c0 .8-.7 1.5-1.5 1.5C9.5 20 4 14.5 3 6.5v-1z"/></svg>
+          <div><strong>WhatsApp / Call</strong>+91 93953 52908</div>
+        </div>
+        <div class="visit-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><strong>Hours</strong>Open daily — message us to confirm today's timing</div>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/919395352908?text=Hi%2C%20I%27d%20like%20to%20visit%20the%20store" target="_blank" rel="noopener">Chat with us</a>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Yasir+Leather+House,+FA+Rd,+Machkhowa,+Guwahati,+Assam+781009&output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Yasir Leather House location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand serif"><img src="logo.png" alt="Yasir Leather House logo" style="height:36px;"> Yasir Leather House</div>
+  <div>FA Rd, Machkhowa, Guwahati, Assam 781009 · Est. 2007</div>
+</footer>
+
+<div class="currency-badge">🇮🇳 INR</div>
+<a class="wa-float" href="https://wa.me/919395352908?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20shoes" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.3c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.4.5-.2.2-.4.4-.5.6-.2.2-.4.4-.2.7.2.3.9 1.5 2 2.4 1.3 1.2 2.5 1.6 2.8 1.7.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.5-.3.8-.2.3.1 1.9.9 2.2 1 .3.2.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+</a>
+
+</body>
+</html>
